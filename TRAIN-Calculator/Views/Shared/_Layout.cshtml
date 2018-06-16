@@ -25,7 +25,7 @@
             <div class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("About", "About", "Home")</li>      
-                    <li>@Html.ActionLink("Timeline", "Index", "Home")</li>   
+                    <li><a href="http://blog.spectres.solutions/2018/06/15/train-engine-ph-timeline/" target="_blank">Timeline</a></li>   
                 </ul>
             </div>
         </div>
@@ -35,11 +35,14 @@
     </div>
     <footer class="footer">
         <img src="~/Content/Images/Logo/spec-bulb-white-200.jpg" style="height:50px;" />
-        <span style="font-size:1.4em;color:#fff;font-family:Calibri">&copy; Spectres.Solutions Inc.</span>
+        <span style="font-size:1.4em;color:#fff;font-family:Calibri">&copy; @DateTime.Today.Year Spectres.Solutions Inc.</span>
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120900243-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-120900243-1');</script>
 </body>
 </html>
